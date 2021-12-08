@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\Auth;
 
+use App\Models\Role;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Verified;
@@ -16,6 +17,8 @@ class EmailVerificationTest extends TestCase
 
     public function test_email_verification_screen_can_be_rendered()
     {
+        Role::create(['id'=>1, 'role'=>'admin']);
+
         $user = User::factory()->create([
             'email_verified_at' => null,
         ]);
@@ -27,6 +30,7 @@ class EmailVerificationTest extends TestCase
 
     public function test_email_can_be_verified()
     {
+        Role::create(['id'=>1, 'role'=>'admin']);
         $user = User::factory()->create([
             'email_verified_at' => null,
         ]);
@@ -48,6 +52,7 @@ class EmailVerificationTest extends TestCase
 
     public function test_email_is_not_verified_with_invalid_hash()
     {
+        Role::create(['id'=>1, 'role'=>'admin']);
         $user = User::factory()->create([
             'email_verified_at' => null,
         ]);
