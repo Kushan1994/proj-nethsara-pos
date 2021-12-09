@@ -23,9 +23,12 @@
         "postcss-import": "^14.0.1",
         "tailwindcss": "^2.1.2",
         "vue": "^3.0.5",
-        "vue-loader": "^16.1.2"
+        "vue-loader": "^16.1.2",
+        "vue-svg-icon": "^1.2.9"
     },
     "dependencies": {
-        "@heroicons/vue": "^1.0.5"
+        "@heroicons/vue": "^1.0.5",
+        "@vue-hero-icons/outline": "^1.7.2",
+        "svg-vue3": "^0.2.1"
     }
 }
