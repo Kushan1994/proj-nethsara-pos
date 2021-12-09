@@ -56,7 +56,7 @@
             <a href="" class="group flex items-center space-x-2 py-3 px-4 hover:bg-gray-400 rounded">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
-                </svg><span class="text-white group-hover:text-gray-100">Sales</span>
+                </svg><span class="text-white group-hover:text-gray-100">Sales1</span>
             </a>
         </nav>
     </div>
