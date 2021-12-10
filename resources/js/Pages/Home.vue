@@ -2,6 +2,7 @@
     <div>
         <Sidebar></Sidebar>
     </div>
+
 </template>
 
 <script setup>
