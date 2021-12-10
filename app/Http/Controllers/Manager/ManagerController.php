@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Manager;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\Supplier\StoreSupplierRequest;
+use App\Models\Supplier;
 use Inertia\Inertia;
 
 class ManagerController extends Controller
@@ -11,5 +12,10 @@ class ManagerController extends Controller
     public function dashboard(): \Inertia\Response
     {
         return Inertia::render('Manager/Dashboard');
+    }
+
+    public function storeSupplier(StoreSupplierRequest $request)
+    {
+        Supplier::create($request->validated());
     }
 }

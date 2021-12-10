@@ -1,7 +1,3 @@
 <template>
-  <websol-title></websol-title>
+  <h1 class="text-lg">Admin Dashboard</h1>
 </template>
-
-<script setup>
-import WebsolTitle from "@/Components/Dashboard/Title.vue";
-</script>
