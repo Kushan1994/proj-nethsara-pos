@@ -41,9 +41,9 @@ Route::prefix('accountant')->middleware(['auth', 'accountant'])->as('accountant.
 
 Route::resource('suppliers', SupplierController::class)->middleware('auth');
 
-Route::get('logout', function () {
-    return redirect('login')->with(Auth::logout());
-});
+// Route::get('logout', function () {
+//     return redirect('login')->with(Auth::logout());
+// });
 
 
 require __DIR__ . '/auth.php';
