@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SupplierController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home',[LoginController::class,'dashboard'])->name('home')->middleware('auth');
+Route::get('/dashboard',[LoginController::class,'dashboard'])->name('dashboard')->middleware('auth');
 
 Route::prefix('admin')->middleware(['auth', 'admin'])->as('admin.')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
@@ -36,6 +38,8 @@ Route::prefix('manager')->middleware(['auth', 'manager'])->as('manager.')->group
 Route::prefix('accountant')->middleware(['auth', 'accountant'])->as('accountant.')->group(function () {
     Route::get('/dashboard', [AccountantController::class, 'dashboard'])->name('dashboard');
 });
+
+Route::resource('suppliers', SupplierController::class)->middleware('auth');
 
 Route::get('logout', function () {
     return redirect('login')->with(Auth::logout());

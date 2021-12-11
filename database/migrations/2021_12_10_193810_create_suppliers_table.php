@@ -20,7 +20,7 @@ class CreateSuppliersTable extends Migration
             $table->string('contact_no_1');
             $table->string('contact_no_2')->nullable();
             $table->text('address');
-            $table->longText('notes');
+            $table->longText('notes')->nullable();
             $table->timestamps();
         });
     }

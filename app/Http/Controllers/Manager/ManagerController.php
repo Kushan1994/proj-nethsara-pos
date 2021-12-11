@@ -13,9 +13,4 @@ class ManagerController extends Controller
     {
         return Inertia::render('Manager/Dashboard');
     }
-
-    public function storeSupplier(StoreSupplierRequest $request)
-    {
-        Supplier::create($request->validated());
-    }
 }
