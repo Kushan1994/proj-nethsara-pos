@@ -25,11 +25,11 @@ class StoreSupplierRequest extends FormRequest
     {
         return [
             'name'=>'required',
-            'email'=>'required|email|unique:suppliers.email',
-            'contact_no_1'=>'required|unique:suppliers.contact_no_1',
+            'email'=>'required',
+            'contact_no_1'=>'required',
             'contact_no_2'=>'nullable',
             'address'=>'required',
-            'notes'=>'nullable'
+            'notes'=>'nullable',
         ];
     }
 }
