@@ -20,8 +20,8 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/home',[LoginController::class,'dashboard'])->name('home')->middleware('auth');
-Route::get('/dashboard',[LoginController::class,'dashboard'])->name('dashboard')->middleware('auth');
+Route::get('/home', [LoginController::class, 'dashboard'])->name('home')->middleware('auth');
+Route::get('/dashboard', [LoginController::class, 'dashboard'])->name('dashboard')->middleware('auth');
 
 Route::prefix('admin')->middleware(['auth', 'admin'])->as('admin.')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
@@ -41,9 +41,9 @@ Route::prefix('accountant')->middleware(['auth', 'accountant'])->as('accountant.
 
 Route::resource('suppliers', SupplierController::class)->middleware('auth');
 
-Route::get('logout', function () {
-    return redirect('login')->with(Auth::logout());
-});
+// Route::get('logout', function () {
+//     return redirect('login')->with(Auth::logout());
+// });
 
 
 require __DIR__ . '/auth.php';
